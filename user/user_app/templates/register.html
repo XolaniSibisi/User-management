@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Registration Page {% endblock title%}
+{% block content %}
+
+<div class="form-content my-3 p-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-0 mb-5">
+                    <div class="card-header justify-content-center">
+                        <h2 class="mt-5 mb-4 text-center">User Registration</h2>
+                        <div class="card-body">
+                            <form method="post">
+                                {% csrf_token %}
+                                {% if form.errors %}
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <div id="form_errors">
+                                        {% for key, value in form.errors.items %}
+                                        <strong>{{ value }}</strong>
+                                        {% endfor %}
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                {% endif %}
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.first_name.label_tag }}
+                                        {{ form.first_name }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.last_name.label_tag }}
+                                        {{ form.last_name }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.email.label_tag }}
+                                        {{ form.email }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.contact_number.label_tag }}
+                                        {{ form.contact_number }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.birth_date.label_tag }}
+                                        {{ form.birth_date }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.id_type.label_tag }}
+                                        {{ form.id_type }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.id_or_passport.label_tag }}
+                                        {{ form.id_or_passport }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.age.label_tag }}
+                                        {{ form.age }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.title.label_tag }}
+                                        {{ form.title }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.youth.label_tag }}
+                                        {{ form.youth }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.gender.label_tag }}
+                                        {{ form.gender }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.race.label_tag }}
+                                        {{ form.race }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                <div class="col-md-6">
+                                    {{ form.disability.label_tag }}
+                                    {{ form.disability }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.home_language.label_tag }}
+                                    {{ form.home_language }}
+                                </div>
+                                </div>
+                                <div class="row mb-3">
+                                <div class="col-md-6">
+                                    {{ form.citezenship.label_tag }}
+                                    {{ form.citezenship }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.nationality.label_tag }}
+                                    {{ form.nationality }}
+                                </div>
+                               </div>
+                                <div class="mb-3">
+                                    {{ form.home_address.label_tag }}
+                                    {{ form.home_address }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.postal_address.label_tag }}
+                                    {{ form.postal_address }}
+                                </div>
+                                <div class="mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.postal_code.label_tag }}
+                                        {{ form.postal_code }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.employment_status.label_tag }}
+                                        {{ form.employment_status }}
+                                    </div>
+                                    
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.unemployed_period.label_tag }}
+                                    {{ form.unemployed_period }}
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.start_date.label_tag }}
+                                        {{ form.start_date }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.end_date.label_tag }}
+                                        {{ form.end_date }}
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.guardian_id_no.label_tag }}
+                                    {{ form.guardian_id_no }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.guardian_full_name.label_tag }}
+                                    {{ form.guardian_full_name }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.guardian_contact.label_tag }}
+                                    {{ form.guardian_contact }}
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.province.label_tag }}
+                                        {{ form.province }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.municipality.label_tag }}
+                                        {{ form.municipality }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.town_or_city.label_tag }}
+                                        {{ form.town_or_city }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.urban_or_rural.label_tag }}
+                                        {{ form.urban_or_rural }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.occupation_level.label_tag }}
+                                        {{ form.occupation_level }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.job_title.label_tag }}
+                                        {{ form.job_title }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.OFO_occupation_code.label_tag }}
+                                        {{ form.OFO_occupation_code }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ form.OFO_specialization.label_tag }}
+                                        {{ form.OFO_specialization }}
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.OFO_occupation.label_tag }}
+                                    {{ form.OFO_occupation }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.highest_school_qualification.label_tag }}
+                                    {{ form.highest_school_qualification }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.highest_qualification.label_tag }}
+                                    {{ form.highest_qualification }}
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        {{ form.student_number.label_tag }}
+                                        {{ form.student_number }}
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.bursary_completion_status.label_tag }}
+                                    {{ form.bursary_completion_status }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.popi_consent.label_tag }}
+                                    {{ form.popi_consent }}
+                                </div>
+                                <div class="mb-3">
+                                    {{ form.popi_consent_date.label_tag }}
+                                    {{ form.popi_consent_date }}
+                                </div>
+                                <div class="form-group mt-4 mb-0">
+                                    <button type="submit" class="col-md-12 btn btn-dark">Register</button><br><br>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="small">
+                                        <a href="{% url 'login' %}">Have an account? Go to Sign in</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

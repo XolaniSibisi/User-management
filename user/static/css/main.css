@@ -1,0 +1,161 @@
+/* Default styles */
+
+.top-bar .nav-item,
+.main-nav .nav-item {
+  display: inline-block; /* Ensure nav items are displayed inline */
+  flex: 1;
+}
+
+.nav-item {
+  margin-right: 20px; /* Add margin between nav items for spacing */
+}
+
+.top-bar .nav-item {
+  display: inline-block;
+}
+
+nav {
+  padding: 0px;
+}
+
+nav.top-bar-wrap {
+  background: rgb(213, 185, 128);
+}
+
+.top-bar-wrap {
+  height: 40px;
+  line-height: 40px;
+}
+
+.main-nav-wrap {
+  height: 80px;
+  line-height: 80px;
+}
+
+nav.main-nav-wrap {
+  background: rgb(74, 43, 104);
+  font-size: 1.25rem;
+}
+
+nav.top-bar-wrap ul,
+nav.main-nav-wrap ul {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+a.nav-link:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-left: 12px solid rgba(0, 0, 0, 0.3);
+}
+
+a.nav-link {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    font-family: '
+    Rubik'
+    ,
+    sans-serif;
+    transform: skew(-25deg);
+    transition: all 400ms ease-out
+  }
+
+a.inner-link {
+  display: inline-block;
+  transform: skew(25deg);
+}
+
+.nav-link {
+  padding: 0px;
+}
+
+.top-bar-wrap a {
+  padding-left: 12px;
+}
+
+.main-nav-wrap a {
+  padding-left: 18px;
+}
+
+.brand-logo img {
+  height: 40px;
+  transform: skew(25deg);
+}
+
+.brand-phone a {
+  display: block;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 2px;
+  height: 40px;
+  line-height: 1.5em;
+  transform: skew(25deg);
+}
+
+.brand-phone,
+.brand-logo {
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  height: 120px;
+  transform: skewX(-25deg);
+}
+
+.brand-logo {
+  left: -30px;
+  padding-left: 70px;
+  background: rgb(74, 43, 104);
+  border-right: 2px solid rgb(213, 185, 128);
+}
+
+.brand-phone {
+  right: 0;
+  right: -30px;
+  padding-right: 70px;
+  background: rgb(213, 185, 128);
+  border-left: 3px solid rgb(74, 43, 104);
+}
+
+.btn-dark {
+  background: rgb(74, 43, 104);
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+  .top-bar-wrap,
+  .main-nav-wrap {
+    height: auto;
+    line-height: normal;
+    display:flex
+  }
+
+  .nav-item {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .brand-logo,
+  .brand-phone {
+    position: relative;
+    padding: 10px;
+    height: auto;
+    transform: none;
+  }
+
+  .brand-logo {
+    left: 0;
+    padding-left: 20px;
+    border-right: none;
+  }
+
+  .brand-phone {
+    right: 0;
+    padding-right: 20px;
+    border-left: none;
+  }
+}
