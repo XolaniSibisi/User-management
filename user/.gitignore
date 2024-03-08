@@ -1,0 +1,8 @@
+# Ignore the following files
+myproject/
+
+db.sqlite3
+
+staticfiles/
+__pycache__/
+local_settings.py
