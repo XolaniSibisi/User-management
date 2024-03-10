@@ -57,6 +57,8 @@ class CustomUser(AbstractUser):
     bursary_completion_status = models.CharField(max_length=50, null=True, blank=True)
     popi_consent = models.CharField(max_length=10, null=True, blank=True)
     popi_consent_date = models.DateField(null=True, blank=True)
+    must_change_password = models.BooleanField(default=True)
+    temporary_password_expires = models.DateTimeField(null=True, blank=True)
     
     
     objects = CustomUserManager()
